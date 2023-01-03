@@ -40,8 +40,8 @@ if(localpc){
 }else{
 
   # loads from shell file: 
-  n.all <- nall
-  n.test <- ntest
+  n.all <- as.numeric(nall)
+  n.test <- as.numeric(ntest)
   # scen also loads
   
   source('user-inputs.R')
