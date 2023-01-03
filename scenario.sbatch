@@ -8,5 +8,5 @@
 echo "LOADING R"
 module load R
 echo "R LOADED"
-Rscript -e 'devtools::install_github("tlverse/sl3")'
+Rscript -e '.libPaths( c( "~/Rlibs2", .libPaths()) ); devtools::install_github("tlverse/sl3")'
 Rscript -e '.libPaths( c( "~/Rlibs2", .libPaths()) ); setwd("~/calibration") ; ntest = 10000; scen = as.numeric(Sys.getenv("S")); nall = as.numeric(Sys.getenv("ss")); source("~/calibration/main-script-alg2.R")'
