@@ -52,6 +52,10 @@ if(localpc){
   
 }
 
+print(scen)
+print(nall)
+print(ntest)
+
 start_time <- Sys.time()
 all_res <- do.many.sim(nsim, n.all = n.all, nk = nk, n.test = n.test, n.gb = n.gb,
                       sim_data = sim_data, sim_data_cal = sim_data_cal,
