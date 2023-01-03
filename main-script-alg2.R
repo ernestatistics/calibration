@@ -45,7 +45,7 @@ if(localpc){
   # scen also loads
   
   source('user-inputs.R')
-  source('functions/functions alg2.R')
+  source('functions alg2.R')
   nsim <- 500
   n.gb <- 100000
   nk <- 10
