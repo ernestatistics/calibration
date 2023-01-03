@@ -8,4 +8,4 @@
 echo "LOADING R"
 module load R
 echo "R LOADED"
-Rscript -e 'source("R_setup.R"); S = Sys.getenv("S"); ss = Sys.getenv("ss"); source("~/calibration/main-script-alg2.R")'
+Rscript -e '.libPaths( c( "~/Rlibs2", .libPaths()) ); setwd("~/calibration") ; S = Sys.getenv("S"); ss = Sys.getenv("ss"); source("~/calibration/main-script-alg2.R")'
