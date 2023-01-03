@@ -4,7 +4,8 @@
 #SBATCH --nodes=1 --ntasks=1 --cpus-per-task=4 --mem-per-cpu=20G 
 #SBATCH --time=14-0
 
-ml R/4.1.2-foss-2020b
+export R_LIBS=~/Rlibs2
+export R_LIBS_USER=~/Rlibs2
 
 
 
