@@ -5,7 +5,7 @@ for S in 4 11
 do
   for ss in 1000 2000 5000 10000
   do
-    sbatch  --export=s=$s,ss=ss ~/calibration/scenario.sbatch
+    sbatch  --export=S=$S,ss=$ss ~/calibration/scenario.sbatch
   done
 done
 
