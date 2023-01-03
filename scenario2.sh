@@ -6,7 +6,7 @@
 
 ml R/4.1.2-foss-2020b
 
-currDir='/home/eulloape/CATE'
+currDir='~/calibration'
 cd $currDir
 
 S=(4 4 4 4)
