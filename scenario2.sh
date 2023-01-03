@@ -1,20 +1,12 @@
-#!/bin/bash
-
-#SBATCH --array=0-28
-#SBATCH --nodes=1 --ntasks=1 --cpus-per-task=4 --mem-per-cpu=20G 
-#SBATCH --time=14-0
-
+#!/bin/usr/env bash
 export R_LIBS=~/Rlibs2
 export R_LIBS_USER=~/Rlibs2
-
-
-
-S=(4 4 4 4)
-ss=(1000 2000 5000 10000)
-
-srun R --vanilla "--args nall=${ss[${SLURM_ARRAY_TASK_ID}]} ntest=10000 scen=${S[${SLURM_ARRAY_TASK_ID}]}" <main-script-alg2.R> job.${SLURM_ARRAY_TASK_ID}.Rout
-
-
-
+for S in 4 4 4 4
+do
+  for ss in 1000 2000 5000 10000
+  do
+    sbatch  --export=s=$s,ss=ss ~/calibration/scenario2.sbatch
+  done
+done
 
 
