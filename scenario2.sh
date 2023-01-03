@@ -6,8 +6,7 @@
 
 ml R/4.1.2-foss-2020b
 
-currDir='~/calibration'
-cd $currDir
+
 
 S=(4 4 4 4)
 ss=(1000 2000 5000 10000)
