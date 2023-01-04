@@ -229,9 +229,10 @@ pseudo_est <- function(dat,covars.outcome, covars.trt, outcome.type = 'binomial'
                        learners.outcome = list(Lrnr_glm$new(), Lrnr_gam$new(), 
                                                Lrnr_xgboost$new(max_depth =4), 
                                                Lrnr_glmnet$new()),
-                       learners.trt = list(Lrnr_glm$new(), Lrnr_gam$new(), 
-                                           Lrnr_xgboost$new(max_depth =4), 
-                                           Lrnr_glmnet$new()), folds.dat, thresh = 0.01){
+                       #learners.trt = list(Lrnr_glm$new(), Lrnr_gam$new(), 
+                       #                     Lrnr_xgboost$new(max_depth =4), 
+                       #                    Lrnr_glmnet$new()), 
+                       learners.trt = list(Lrnr_glm$new()), folds.dat, thresh = 0.01){
   
   Y <- dat$Y
   A <- dat$A
