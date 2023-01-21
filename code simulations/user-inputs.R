@@ -241,14 +241,14 @@ if(scen == 1 || scen == 2 || scen == 3 || scen == 4){
   
   # For pseudo-outcomes:
   ## Treatment regression
-  # learners.trt = list(Lrnr_glm$new(), Lrnr_gam$new(), 
-  #                     Lrnr_xgboost$new(max_depth = 2), 
-  #                     Lrnr_xgboost$new(max_depth = 4), 
-  #                     Lrnr_xgboost$new(max_depth = 6), 
-  #                     Lrnr_glmnet$new())
+   learners.trt = list(Lrnr_glm$new(), Lrnr_gam$new(), 
+                       Lrnr_xgboost$new(max_depth = 2), 
+                       Lrnr_xgboost$new(max_depth = 4), 
+                       Lrnr_xgboost$new(max_depth = 6), 
+                       Lrnr_glmnet$new())
   
-  learners.trt = list(Lrnr_glm$new(), 
-                      Lrnr_glmnet$new())
+  #learners.trt = list(Lrnr_glm$new(), 
+  #                    Lrnr_glmnet$new())
   
   ## Outcome regression
   learners.outcome = list(Lrnr_glm$new(), Lrnr_gam$new(), 
@@ -459,10 +459,10 @@ if(scen == 12){
 if(scen == 11 || scen == 12){
   # For pseudo-outcomes:
   ## Treatment regression
-  learners.trt = list(Lrnr_glmnet$new())
+  learners.trt = list(Lrnr_glmnet$new(), Lrnr_glmnet$new())
   
   ## Outcome regression
-  learners.outcome = list(Lrnr_glmnet$new())
+  learners.outcome = list(Lrnr_glmnet$new(), Lrnr_glmnet$new())
   
   ## CATE learners
   lrnr.glmnet <- make_learner(Lrnr_glmnet)
