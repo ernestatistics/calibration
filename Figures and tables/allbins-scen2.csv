@@ -1,0 +1,7 @@
+﻿Cal,method,Lower Decile,Upper Decile,Lower Decile,Upper Decile,Lower Decile,Upper Decile,Lower Decile,Upper Decile
+yes,glmnet,0,0,0,0,0.01,0.01,0.01,0.01
+no,glmnet,0.18,0.19,0.2,0.18,0.15,0.16,0.14,0.12
+yes,glmnetxgb,-0.23,-0.06,-0.18,-0.06,-0.33,-0.08,-0.37,-0.1
+no,glmnetxgb,-0.36,-0.16,-0.34,-0.15,-0.4,-0.2,-0.35,-0.22
+yes,random forest,-0.09,-0.03,-0.06,-0.03,-0.14,-0.04,-0.21,-0.04
+no,random forest,-0.9,-0.75,-0.86,-0.7,-0.95,-0.82,-0.98,-0.87
